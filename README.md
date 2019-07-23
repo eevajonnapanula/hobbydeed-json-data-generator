@@ -5,5 +5,4 @@ This is a small GraphQL - project for generating JSON-data to import to Hobbydee
 Demo running in: 
 
 ## TODO:
-- [ ] Tests
 - [ ] Add possibility to choose if event is recurring or not

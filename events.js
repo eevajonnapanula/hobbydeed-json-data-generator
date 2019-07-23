@@ -60,9 +60,9 @@ const generateEvents = (end, events, eventIndex, array) => {
   return generateEvents(end, events, eventIndex + 1, newArr)
 }
 
-const getEvents = (endDay, eventsArray) => {
+const getEvents = (endDay, eventsInput) => {
   const end = moment(endDay)
-  return generateEvents(end, eventsArray, 0, [])
+  return generateEvents(end, eventsInput, 0, [])
 }
 
 module.exports = {
