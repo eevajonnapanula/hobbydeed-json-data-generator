@@ -1,0 +1,27 @@
+{
+  "name": "hobbydeed-json-generator",
+  "version": "1.0.0",
+  "description": "Helper for generating Hobbydeed JSON-data",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hobbydeed",
+    "graphql",
+    "apollo",
+    "react"
+  ],
+  "author": "eevajonnapanula",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.7.0",
+    "graphql": "^14.4.2",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
