@@ -1,6 +1,9 @@
 const { gql } = require('apollo-server')
 
 const typeDefs = gql`
+  """
+  A type describing events type. These are ones Hobbydeed is supporting
+  """
   enum EventType {
     KOULUTUS
     KOKOUS
@@ -46,11 +49,15 @@ const typeDefs = gql`
   input EventInput {
     name: String!
     day: Day!
+    "Should be formatted as 2019-01-01"
     firstEvent: String!
+    "Should be formatted as 20.00"
     startTime: String!
+    "Should be formatted as 20.00"
     endTime: String!
     eventTypeId: EventType!
     locationName: String
+    "For street address to work, write it without commas such as Kylävainiontie 18 Espoo. Also, for street address to work, you add latitude and longitude."
     streetAddress: String
     latitude: Float
     longitude: Float
@@ -58,6 +65,7 @@ const typeDefs = gql`
   }
 
   input EventsInput {
+    "Should be formatted as 2019-01-01"
     endDay: String!
     events: [EventInput!]!
   }
