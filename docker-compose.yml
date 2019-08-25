@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  json-generator:
+    build: .
+    env_file:
+    - .env
+    command: npm run docker-dev
+    ports: 
+      - ${PORT}:${PORT}
+    

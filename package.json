@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "docker-dev": "nodemon --legacy-watch"
   },
   "keywords": [
     "hobbydeed",
