@@ -6,3 +6,4 @@ Demo running in:
 
 ## TODO:
 - [ ] Add possibility to choose if event is recurring or not
+- [ ] Add possibility to choose how many days apart an event is 
