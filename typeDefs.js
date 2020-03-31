@@ -62,6 +62,7 @@ const typeDefs = gql`
     latitude: Float
     longitude: Float
     info: String
+    everyOrEveryOtherWeeks: Boolean
   }
 
   input EventsInput {

@@ -34,7 +34,7 @@ const eventType = {
   VIIKOTTAINEN_HARJOITUS_KOKOONTUMINEN: '-p5894eb9c1e4690.07019638',
 }
 
-const getAll = (start, end, array, event) => {
+const getAll = (start, end, array, event, everyOrEveryOtherWeeks) => {
   if (end.isSameOrBefore(start)) {
     return array
   } else {
@@ -46,6 +46,7 @@ const getAll = (start, end, array, event) => {
       endTime: `${start.format(formatString)} ${event.endTime}`,
     }
     array.push(object)
+
     return getAll(start.add(7, 'days'), end, array, event)
   }
 }
@@ -55,12 +56,12 @@ const generateEvents = (end, events, eventIndex, array) => {
     return array
   }
   const start = moment(events[eventIndex].firstEvent)
-  const generatedEvents = getAll(start, end, [], events[eventIndex])
+  const generatedEvents = getAll(start, end, [], events[eventIndex], true)
   const newArr = array.concat(generatedEvents)
   return generateEvents(end, events, eventIndex + 1, newArr)
 }
 
-const getEvents = (endDay, eventsInput) => {
+const getEvents = (endDay, eventsInput,) => {
   const end = moment(endDay)
   return generateEvents(end, eventsInput, 0, [])
 }
