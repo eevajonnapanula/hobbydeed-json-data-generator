@@ -21,7 +21,7 @@
     "apollo-server": "^2.11.0",
     "dotenv": "^8.2.0",
     "graphql": "^14.6.0",
-    "moment": "^2.24.0"
+    "moment": "^2.25.1"
   },
   "devDependencies": {
     "jest": "^25.2.7",
