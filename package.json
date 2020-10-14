@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "jest": "^25.2.7",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.5"
   },
   "jest": {
     "testEnvironment": "node"
